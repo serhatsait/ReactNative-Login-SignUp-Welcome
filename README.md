@@ -77,3 +77,32 @@ To learn more about React Native, take a look at the following resources:
 - [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
 - [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
 - [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+
+# Farklı bir cihaz ile test etmek için
+Projede önce 
+```
+yarn start
+```
+yapılarak metro ayağa kaldırılır. Sonra aşağıdaki komut ile farklı bir cihazda test edilebilir.
+```
+npx react-native run-ios --simulator="iPhone 14 Pro"
+```
+
+# Notlar
+
+- Yeni bir library eklemek için
+```
+yarn add react-native-vector-icons
+```
+- Yeni bir library ekledikten sonra
+```
+npx react-native link
+```
+- Yeni bir library ekledikten sonra ios klasörüne gidip
+```
+pod install
+```
+- Yeni bir library ekledikten sonra android klasörüne gidip
+```
+./gradlew clean
+```
